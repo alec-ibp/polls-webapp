@@ -23,4 +23,4 @@ class Choice(models.Model):
 
 
     def __str__(self) -> str:
-        return self.choice_text
+        return f"{self.choice_text} votes: {self.votes}"
