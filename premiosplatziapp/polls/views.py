@@ -1,9 +1,26 @@
+from .models import Question
+
+from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello Django")
+    """ 
+    /polls/
+    Args:
+        request: HTTP Request
+    Returns:
+        [Render]: request, template, Dict(Question.objects.all()) 
+    """
+    latest_question_list = Question.objects.all()
+    
+    return render(
+        request, 
+        "polls/index.html", 
+        {
+            "latest_question_list": latest_question_list
+        })
 
 
 def details(request, question_id):
