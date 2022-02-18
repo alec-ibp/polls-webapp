@@ -1,3 +1,3 @@
 # polls-webapp
 
-This is a basic webapp made up with Django, in witch you call vote for yoour favorite features
+This is a basic webapp made up with Django, you can vote for your feavorite feature
